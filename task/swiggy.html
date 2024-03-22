@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin-right: auto;
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .hero {
+      background-image: url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e04a3f;
+    }
+
+    .featured-restaurants {
+      padding: 50px 0;
+    }
+
+    .restaurant {
+      margin-bottom: 40px;
+    }
+
+    .restaurant img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .restaurant h3 {
+      font-size: 1.5rem;
+    }
+
+    .restaurant p {
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Swiggy</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Order food online from your favorite restaurants</h2>
+      <a href="#" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <section class="featured-restaurants">
+    <div class="container">
+      <h2>Featured Restaurants</h2>
+      <div class="restaurant">
+        <img src="restaurant1.jpg" alt="Restaurant 1">
+        <h3>Restaurant 1</h3>
+        <p>Description of Restaurant 1</p>
+      </div>
+      <div class="restaurant">
+        <img src="restaurant2.jpg" alt="Restaurant 2">
+        <h3>Restaurant 2</h3>
+        <p>Description of Restaurant 2</p>
+      </div>
+      <!-- Add more restaurant divs as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Swiggy. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

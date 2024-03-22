@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking System</title>
+</head>
+<body>
+  <input type="text" id="vehicleNumberInput" placeholder="Enter vehicle number">
+  <button onclick="allocateSpot()">Allocate</button>
+
+  <input type="text" id="exitVehicleNumberInput" placeholder="Enter vehicle number to exit">
+  <button onclick="exitSpot()">Exit</button>
+   
+  <div class="parking-space">
+    <div class="parking-spot" id="spot1">1</div>
+    <div class="parking-spot" id="spot2">2</div>
+    <div class="parking-spot" id="spot3">3</div>
+    <div class="parking-spot" id="spot4">4</div>
+    <div class="parking-spot" id="spot5">5</div>
+    <div class="parking-spot" id="spot6">6</div>
+    <div class="parking-spot" id="spot7">7</div>
+    <div class="parking-spot" id="spot8">8</div>
+    <div class="parking-spot" id="spot9">9</div>
+    <div class="parking-spot" id="spot10">10</div>
+  </div>
+
+  <style>
+    body {
+      background-color: aliceblue;
+    }
+
+    .parking-space {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
+    .parking-spot {
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    .parked {
+      background: linear-gradient(red);
+    }
+  </style>
+  <script>
+    function updateSpotColors() {
+      const spots = document.querySelectorAll('.parking-spot');
+
+      let allOccupied = true;
+      for (let i = 0; i < spots.length; i++) {
+        const spot = spots[i];
+        if (!spot.classList.contains('parked')) {
+          spot.style.backgroundColor = 'green';
+          allOccupied = false;
+        } else {
+          spot.style.backgroundColor = 'red';
+        }
+      }
+
+      if (allOccupied) {
+        alert('All spots are occupied.');
+      }
+    }
+
+    
+    function allocateSpot() {
+      const vehicleNumber = document.getElementById('vehicleNumberInput').value.trim();
+      if (!vehicleNumber) return;
+
+      const spot = document.getElementById('spot' + vehicleNumber);
+      if (spot && !spot.classList.contains('parked')) {
+        spot.classList.add('parked');
+        updateSpotColors(); 
+      } else {
+        alert('Invalid vehicle number or spot already occupied.');
+      }
+    }
+
+    
+    function exitSpot() {
+      const vehicleNumber = document.getElementById('exitVehicleNumberInput').value.trim();
+      if (!vehicleNumber) return; 
+
+      const spot = document.getElementById('spot' + vehicleNumber);
+      if (spot && spot.classList.contains('parked')) {
+        spot.classList.remove('parked');
+        spot.style.backgroundColor = 'green';
+      } else {
+        alert('Invalid vehicle number or spot not occupied.');
+      }
+    }
+  </script>
+</body>
+</html>

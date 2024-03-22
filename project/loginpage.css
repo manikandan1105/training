@@ -1,0 +1,22 @@
+body{
+    margin: 200;
+    padding: 120;
+    background-color:#06628dba;
+    font-family: 'Arial';
+}
+.login{
+    background-color:rgb(1, 1, 15);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(241, 237, 237, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align:auto;
+
+}
+
+
+h1{
+    text-align: center;
+    color: #277582;
+    padding: 15px;
+}
